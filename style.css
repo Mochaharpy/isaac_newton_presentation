@@ -6,13 +6,17 @@ body {
 }
 
 video-transition {
+  display: none;
   width: 100%;
   height: 100%;
+}
+
+video-transition.active {
+  display: block;
 }
 
 video-transition video {
   object-fit: contain;
   width: 100%;
   height: 100%;
-  
 }
