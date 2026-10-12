@@ -1,25 +1,13 @@
-class PanelElement extends HTMLElement {
+class VideoTransitionElement extends HTMLElement {
   constructor() {
     super();
   }
 
   connectedCallback() {
-    this.classList.add("panel");
+    const videoSource = this.getAttribute('src');
+    const video = document.createElement('video');
+    video.src = videoSource;
   }
 }
 
-customElements.define("p-panel", PanelElement);
-document.addEventListener("keypress", () => {
-  const currentActivePanel = document.querySelector('.active.panel')
-  const newActiveTab = currentActivePanel.nextElementSibling;
-  if (!newActiveTab) {
-    // put some stuff here
-  }
-  const activePanels = document.querySelectorAll(".active.panel");
-
-  activePanels.forEach((activePanel) => {
-    activePanel.classList.remove("active");
-  });
-
-  newActiveTab.classList.add("active");
-});
+customElements.define("video-transition", VideoTransitionElement);

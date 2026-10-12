@@ -1,8 +1,18 @@
-.panel {
-  display: none;
-  font-size: 50px;
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
 }
 
-.panel.active {
-  display: block;
+video-transition {
+  width: 100%;
+  height: 100%;
+}
+
+video-transition video {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  
 }
