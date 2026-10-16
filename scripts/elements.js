@@ -12,7 +12,7 @@ class VideoTransitionElement extends HTMLElement {
     const videoSource = this.getAttribute("src");
     this.video = document.createElement("video");
     this.video.setAttribute("playsinline", "");
-    this.video.src = videoSource;
+    this.video.video = videoSource;
     this.appendChild(this.video);
   }
 
